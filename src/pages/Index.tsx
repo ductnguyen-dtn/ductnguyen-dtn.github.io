@@ -13,7 +13,7 @@ const Index = () => {
           content="DTN portfolio — Electrical and Computer Engineering student focused on robotics, embedded systems, and software engineering."
         />
         <meta name="keywords" content="DTN, ECE student, robotics, embedded systems, software engineering" />
-        <link rel="canonical" href="https://ductnguyen-dtn.com" />
+        <link rel="canonical" href="https://ductnguyen-dtn.github.io" />
       </Helmet>
 
       <div className="min-h-screen bg-background">

@@ -112,7 +112,7 @@ const ContactSection = () => {
                   <span className="font-semibold">Available for Opportunities</span>
                 </div>
                 <p className="text-primary-foreground/80 text-sm">
-                  Currently seeking Summer 2025 internships in robotics, embedded systems, and software engineering.
+                  Currently seeking Summer 2027 internships in robotics, embedded systems, and software engineering.
                 </p>
               </div>
             </div>

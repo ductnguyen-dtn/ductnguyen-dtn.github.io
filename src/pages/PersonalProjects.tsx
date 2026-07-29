@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { Github, Bot, Trophy, Wrench } from "lucide-react";
+import { Github, Bot, Trophy, Wrench, Cpu } from "lucide-react";
 import armRingGear from "@/assets/arm-ring-gear.jpg";
 import armDisk1 from "@/assets/arm-disk1.jpg";
 import armDisk2 from "@/assets/arm-disk2.jpg";
@@ -21,8 +21,8 @@ import companionCatchImage from "@/assets/companion-catch.png";
 
 const personalProjects: Project[] = [
   {
-    title: "6-DoF Robotic Arm",
-    description: "Designing a 6-axis robotic arm with cycloidal gearboxes, hollow arm structure, and scalable joint architecture.",
+    title: "6-DoF Robotic Arm — Custom Mechanical Build",
+    description: "Designing a 6-axis robotic arm from scratch with cycloidal gearboxes, hollow arm structure, and scalable joint architecture.",
     longDescription: "For the base joints (J1 and J2), I selected and implemented an open-source cycloidal gearbox design from How To Mechatronics. This decision was driven by the need for high torque density, low backlash, and manufacturability using accessible methods.\n\nI 3D printed all gearbox components and am currently in the testing phase, evaluating performance factors such as torque transmission, smoothness of motion, wear, and structural reliability. This phase is critical for validating whether a 3D-printed cycloidal solution is viable for load-bearing joints.\n\nIn parallel, I am developing a hollow arm structure to allow internal routing of wires and components. This approach aims to improve cable management, reduce external clutter, and increase overall system reliability.\n\nFor the remaining joints (J3–J6), I am actively exploring different joint architectures and actuation strategies, evaluating tradeoffs between compactness, torque requirements, and ease of assembly.",
     tags: ["Robotics", "CAD", "3D Printing", "Mechanical", "Embedded"],
     icon: Wrench,
@@ -38,6 +38,14 @@ const personalProjects: Project[] = [
       { src: armPlate4, caption: "Bottom of housing bottom (larger motor)" },
       { src: armParts, caption: "Assorted gearbox components" },
     ],
+  },
+  {
+    title: "SO-ARM101 — Vision-Language-Action Manipulation",
+    description: "Building a learned manipulation pipeline on a 5-DoF SO-101 arm: leader/follower teleoperation, episode recording for imitation learning, and a calibrated Isaac Sim digital twin.",
+    longDescription: "This project pairs a ready-made 5-DoF SO-101 arm and gripper with a full data-collection and simulation pipeline for learned manipulation.\n\nOn the hardware side, I built a leader/follower teleoperation bridge over the servos' serial protocol, in which a torque-disabled leader arm is mirrored in real time by a torque-enabled follower. On top of that sits an episode recorder that captures synchronized camera video and joint state to disk, producing the demonstration dataset that vision-language-action training runs on.\n\nIn parallel I converted the arm's URDF to USD and stood up an Isaac Sim digital twin that mirrors the physical follower live. Getting the twin to agree with the real arm turned out to be the hard part: the naive mapping from raw servo ticks to joint angles was wrong in direction, scale, and offset at once, and a single-point zero calibration only stayed accurate at the exact pose it was measured at. I replaced it with a two-point-per-joint visual calibration routine that drives the simulated arm to each joint limit and records the real servo reading at the matching physical pose, capturing direction, scale, and offset from measurement in a single step.\n\nOne debugging result worth noting: OpenCV's bundled Qt backend and Isaac Sim's Kit UI cannot coexist in a single process — Kit's main window is silently never created, with no crash and no error on either side. I confirmed this by inspecting the X window tree during a live run and split the system into two cooperating processes that hand off state through an atomically-written file, which also avoids two processes contending for the same serial bus.\n\nThe next step is an Isaac Lab manager-based reinforcement learning task for pick-and-place, moving the project from imitation learning toward sim-to-real RL.",
+    tags: ["Isaac Sim", "Imitation Learning", "VLA", "Python", "Sim-to-Real"],
+    icon: Cpu,
+    github: "#",
   },
   {
     title: "Tobot - Autonomous Tennis Ball Collector",

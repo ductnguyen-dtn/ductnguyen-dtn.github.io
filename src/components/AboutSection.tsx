@@ -37,7 +37,7 @@ const AboutSection = () => {
               Building the <span className="text-gradient">Future</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              I'm a freshman Electrical and Computer Engineering student at Olin College of Engineering, 
+              I'm a rising sophomore studying Electrical and Computer Engineering at Olin College of Engineering,
               passionate about autonomous systems, embedded development, and hardware design.
             </p>
           </div>
