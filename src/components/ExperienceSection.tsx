@@ -4,6 +4,29 @@ const ExperienceSection = () => {
   const experiences = [
     {
       type: "work",
+      title: "Robotics R&D Intern — Hardware & Reinforcement Learning",
+      company: "Viettel Institute of Strategic Technology (VIST)",
+      period: "May – Aug 2026",
+      description: [
+        "Trained quadruped locomotion policies in NVIDIA Isaac Lab, taking the robot from postural collapse to stable forward walking across 18 documented checkpoints",
+        "Root-caused a simulation defect in which a fixed root joint pinned the robot base, making nonzero policy actions produce zero movement",
+        "Ran controlled reward-shaping experiments across action scale, foot clearance, and heading-drift terms, promoting a checkpoint only after side-by-side diagnostic comparison",
+        "Worked across both the electrical hardware and the RL training stack, targeting sim-to-real transfer onto physical quadruped platforms",
+      ],
+    },
+    {
+      type: "work",
+      title: "Robotics Software Intern — ROS 2 & SLAM",
+      company: "STI Vietnam",
+      period: "Jul – Aug 2026",
+      description: [
+        "Developed autonomous navigation for warehouse AGVs using ROS 2, integrating SLAM-based mapping with the NAV2 stack for path planning and obstacle avoidance",
+        "Tuned localization and costmap parameters against real warehouse floor plans to improve navigation reliability in production environments",
+      ],
+      website: "https://stivietnam.com",
+    },
+    {
+      type: "work",
       title: "Electronics & Firmware Engineer",
       company: "Formula SAE Electric",
       period: "2025 – Present",
@@ -181,6 +204,7 @@ const ExperienceSection = () => {
                 <div className="space-y-4">
                   {[
                     { category: "Programming", skills: "Python, C++, Embedded C, MATLAB, ROS2" },
+                    { category: "Simulation & RL", skills: "NVIDIA Isaac Sim / Isaac Lab, reinforcement learning for locomotion, sim-to-real" },
                     { category: "Embedded", skills: "STM32, ATmega, ArduPilot, CAN bus, ESCs" },
                     { category: "PCB & Electronics", skills: "KiCad, power distribution, mixed-signal debugging" },
                     { category: "Tools", skills: "Oscilloscope, OpenCV, TensorFlow Lite, Gazebo, RViz" },
