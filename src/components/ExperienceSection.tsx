@@ -23,6 +23,7 @@ const ExperienceSection = () => {
       description: [
         "Developed autonomous navigation for warehouse AGVs using ROS 2, integrating SLAM-based mapping with the NAV2 stack for path planning and obstacle avoidance",
         "Tuned localization and costmap parameters against real warehouse floor plans to improve navigation reliability in production environments",
+        "Carried out on-site AGV setup and commissioning at a client manufacturing facility, mapping the plant floor and configuring navigation for live operation",
       ],
       website: "https://stivietnam.com",
     },
