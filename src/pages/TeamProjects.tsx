@@ -7,13 +7,13 @@ import ProjectModal from "@/components/ProjectModal";
 import ProjectCard, { type Project } from "@/components/ProjectCard";
 import { Button } from "@/components/ui/button";
 
-import aeroImage from "@/assets/aero.png";
+import aeroImage from "@/assets/aero.jpg";
 import formulaImage from "@/assets/formula.png";
-import watchdogImage from "@/assets/watchdog.jpeg";
-import crogImage from "@/assets/crog.png";
+import watchdogImage from "@/assets/watchdog.jpg";
+import crogImage from "@/assets/crog.jpg";
 
-import formulaWrongStm from "@/assets/formula-wrong-stm.png";
-import formulaCorrectStm from "@/assets/formula-correct-stm.png";
+import formulaWrongStm from "@/assets/formula-wrong-stm.jpg";
+import formulaCorrectStm from "@/assets/formula-correct-stm.jpg";
 import formulaFinalSchematic from "@/assets/formula-final-schematic.png";
 import formulaCanController from "@/assets/formula-can-controller.png";
 import formulaPcbTop from "@/assets/formula-pcb-top.png";

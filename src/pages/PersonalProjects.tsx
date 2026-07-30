@@ -16,7 +16,7 @@ import ProjectModal from "@/components/ProjectModal";
 import ProjectCard, { type Project } from "@/components/ProjectCard";
 import { Button } from "@/components/ui/button";
 
-import tobotImage from "@/assets/tobot.jpeg";
+import tobotImage from "@/assets/tobot.jpg";
 import companionCatchImage from "@/assets/companion-catch.png";
 
 const personalProjects: Project[] = [

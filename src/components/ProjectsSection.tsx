@@ -3,12 +3,12 @@ import { Github, Bot, Code2, CircuitBoard, Plane, Trophy, Zap } from "lucide-rea
 import { Button } from "@/components/ui/button";
 import ProjectModal from "@/components/ProjectModal";
 
-import aeroImage from "@/assets/aero.png";
+import aeroImage from "@/assets/aero.jpg";
 import formulaImage from "@/assets/formula.png";
-import tobotImage from "@/assets/tobot.jpeg";
+import tobotImage from "@/assets/tobot.jpg";
 import companionCatchImage from "@/assets/companion-catch.png";
-import watchdogImage from "@/assets/watchdog.jpeg";
-import crogImage from "@/assets/crog.png";
+import watchdogImage from "@/assets/watchdog.jpg";
+import crogImage from "@/assets/crog.jpg";
 
 const ProjectsSection = () => {
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
