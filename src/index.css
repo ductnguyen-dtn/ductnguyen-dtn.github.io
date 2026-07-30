@@ -17,7 +17,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 25% 10%;
 
-    /* Brand palette (DTN) — fixed across light/dark */
+    /* Brand palette, fixed across light and dark */
     --brand-1: 210 85% 48%;
     --brand-2: 265 80% 56%;
     --brand-3: 195 70% 42%;
