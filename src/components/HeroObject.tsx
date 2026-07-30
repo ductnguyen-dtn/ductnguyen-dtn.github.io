@@ -88,6 +88,10 @@ const HeroObject = () => {
     let spin = 0;
     let raf = 0;
 
+    // Offset to the right of the centred hero copy. A centred object competes
+    // with the headline no matter how faint it is.
+    const centre = () => ({ cx: width * 0.82, cy: height * 0.46 });
+
     const project = (v: [number, number, number], scale: number) => {
       const [x, y, z] = v;
       // Y rotation
@@ -103,9 +107,10 @@ const HeroObject = () => {
 
       const depth = 6;
       const persp = depth / (depth + pz);
+      const { cx: ox, cy: oy } = centre();
       return {
-        x: width / 2 + px * scale * persp,
-        y: height / 2 + py * scale * persp,
+        x: ox + px * scale * persp,
+        y: oy + py * scale * persp,
         // 0 = far, 1 = near. Drives opacity and dot size.
         d: (pz + PHI) / (2 * PHI),
       };
@@ -114,11 +119,18 @@ const HeroObject = () => {
     const draw = () => {
       ctx.clearRect(0, 0, width, height);
 
+      // A cursor-reactive object is pointless on a touch device, and the hero
+      // has no spare room at narrow widths. Skip it rather than crowd the copy.
+      if (width < 900 || !window.matchMedia("(pointer: fine)").matches) {
+        raf = requestAnimationFrame(draw);
+        return;
+      }
+
       rotX += (targetX - rotX) * 0.05;
       rotY += (targetY - rotY) * 0.05;
       if (!reduceMotion) spin += 0.0022;
 
-      const scale = Math.min(width, height) * 0.22;
+      const scale = Math.min(width, height) * 0.105;
       const pts = VERTICES.map((v) => project(v, scale));
 
       for (const [a, b] of EDGES) {
@@ -128,7 +140,7 @@ const HeroObject = () => {
         const grad = ctx.createLinearGradient(p.x, p.y, q.x, q.y);
         grad.addColorStop(0, brand1);
         grad.addColorStop(1, brand2);
-        ctx.globalAlpha = 0.10 + near * 0.40;
+        ctx.globalAlpha = 0.08 + near * 0.30;
         ctx.strokeStyle = grad;
         ctx.lineWidth = 0.6 + near * 1.1;
         ctx.beginPath();
@@ -138,7 +150,7 @@ const HeroObject = () => {
       }
 
       for (const p of pts) {
-        ctx.globalAlpha = 0.25 + p.d * 0.65;
+        ctx.globalAlpha = 0.18 + p.d * 0.5;
         ctx.fillStyle = brand2;
         ctx.beginPath();
         ctx.arc(p.x, p.y, 1.3 + p.d * 2.2, 0, Math.PI * 2);
