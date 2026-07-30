@@ -7,12 +7,12 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>DTN | ECE Student</title>
+        <title>Duc Tuan Nguyen | ECE Student</title>
         <meta
           name="description"
           content="Portfolio of Duc Tuan Nguyen, an Electrical and Computer Engineering student working on robotics, embedded systems, and reinforcement learning."
         />
-        <meta name="keywords" content="DTN, ECE student, robotics, embedded systems, software engineering" />
+        <meta name="keywords" content="Duc Tuan Nguyen, ECE student, robotics, embedded systems, reinforcement learning" />
         <link rel="canonical" href="https://ductnguyen-dtn.github.io" />
       </Helmet>
 

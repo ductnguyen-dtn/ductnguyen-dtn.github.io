@@ -7,7 +7,7 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>About | DTN</title>
+        <title>About | Duc Tuan Nguyen</title>
         <meta name="description" content="About Duc Nguyen, ECE student at Olin College focused on robotics, embedded systems, and software engineering." />
       </Helmet>
       <div className="min-h-screen bg-background">

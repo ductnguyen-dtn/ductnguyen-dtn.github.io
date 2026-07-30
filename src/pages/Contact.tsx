@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact | DTN</title>
+        <title>Contact | Duc Tuan Nguyen</title>
         <meta name="description" content="Contact Duc Nguyen, ECE student open to opportunities." />
       </Helmet>
       <div className="min-h-screen bg-background">

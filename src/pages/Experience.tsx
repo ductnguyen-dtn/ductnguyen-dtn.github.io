@@ -7,7 +7,7 @@ const Experience = () => {
   return (
     <>
       <Helmet>
-        <title>Experience | DTN</title>
+        <title>Experience | Duc Tuan Nguyen</title>
         <meta name="description" content="Experience and education for Duc Nguyen, ECE student at Olin College." />
       </Helmet>
       <div className="min-h-screen bg-background">

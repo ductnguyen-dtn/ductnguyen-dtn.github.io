@@ -73,7 +73,7 @@ const PersonalProjects = () => {
   return (
     <>
       <Helmet>
-        <title>Personal Projects | DTN</title>
+        <title>Personal Projects | Duc Tuan Nguyen</title>
         <meta name="description" content="Personal projects by Duc Nguyen across robotics, AI, and embedded systems." />
       </Helmet>
       <div className="min-h-screen bg-background">

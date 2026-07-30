@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             {/* Logo and tagline */}
             <div className="text-center md:text-left">
-              <span className="text-xl font-bold font-mono text-gradient">{"<DTN />"}</span>
+              <span className="text-xl font-bold text-gradient">Duc Tuan Nguyen</span>
               <p className="text-sm text-muted-foreground mt-2">
                 Electrical and Computer Engineering • Franklin W. Olin College of Engineering
               </p>
@@ -43,11 +43,8 @@ const Footer = () => {
 
           {/* Copyright */}
           <div className="mt-8 pt-8 border-t border-border text-center">
-            <p className="text-sm text-muted-foreground flex items-center justify-center gap-1">
-              Built with <Heart className="w-4 h-4 text-accent" /> using React & Tailwind
-            </p>
-            <p className="text-xs text-muted-foreground mt-2">
-              © {new Date().getFullYear()} Duc Nguyen. All rights reserved.
+            <p className="text-xs text-muted-foreground">
+              © {new Date().getFullYear()} Duc Tuan Nguyen
             </p>
           </div>
         </div>

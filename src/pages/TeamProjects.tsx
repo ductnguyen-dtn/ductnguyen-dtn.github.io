@@ -120,7 +120,7 @@ const TeamProjects = () => {
   return (
     <>
       <Helmet>
-        <title>Team Projects | DTN</title>
+        <title>Team Projects | Duc Tuan Nguyen</title>
         <meta name="description" content="Team projects by Duc Nguyen across robotics, embedded systems, and hardware design." />
       </Helmet>
       <div className="min-h-screen bg-background">
