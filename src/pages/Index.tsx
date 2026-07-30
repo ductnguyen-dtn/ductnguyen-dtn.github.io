@@ -10,7 +10,7 @@ const Index = () => {
         <title>DTN | ECE Student</title>
         <meta
           name="description"
-          content="DTN portfolio — Electrical and Computer Engineering student focused on robotics, embedded systems, and software engineering."
+          content="Portfolio of Duc Tuan Nguyen, an Electrical and Computer Engineering student working on robotics, embedded systems, and reinforcement learning."
         />
         <meta name="keywords" content="DTN, ECE student, robotics, embedded systems, software engineering" />
         <link rel="canonical" href="https://ductnguyen-dtn.github.io" />

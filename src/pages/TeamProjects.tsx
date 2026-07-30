@@ -34,44 +34,44 @@ const teamProjects: Project[] = [
         content: "I designed and iterated on a custom charging control board for a Formula SAE electric vehicle, taking ownership of the schematic architecture, MCU selection, and PCB layout using KiCad. This project required rapid self-learning, debugging at scale, and balancing electrical design tradeoffs under tight team deadlines.",
       },
       {
-        title: "Early Development — Toolchain Ramp-Up & Critical Design Reset",
+        title: "Early Development: Toolchain Ramp-Up and Critical Design Reset",
         image: formulaWrongStm,
         content: "I began this project with no prior experience in KiCad, quickly learning schematic capture, footprint management, and PCB workflows. During initial development, I selected an incorrect STM32 microcontroller, which forced a full redesign.",
       },
       {
         image: formulaCorrectStm,
-        content: "Rather than patching the issue, I restarted from first principles—revalidating datasheets, pin mappings, and system requirements. This reset significantly improved design accuracy and established a disciplined, documentation-driven workflow.",
+        content: "Rather than patching the issue, I restarted from first principles, revalidating datasheets, pin mappings, and system requirements. This reset significantly improved design accuracy and established a disciplined, documentation-driven workflow.",
       },
       {
         image: formulaFinalSchematic,
-        title: "System Architecture — MCU Integration & Interface Expansion",
+        title: "System Architecture: MCU Integration and Interface Expansion",
         content: "I rebuilt the schematic around the correct STM32, aligning all subsystems with the MCU's pinout and electrical constraints. As system requirements evolved, I transitioned from a legacy seven-segment display to an LCD interface to improve usability and data visibility.\n\nThis introduced new constraints: the original MCU lacked sufficient GPIO capacity. I identified this bottleneck early and migrated to a higher pin-count STM32 variant, redesigning the schematic to support expanded I/O while maintaining signal integrity.",
       },
       {
         image: formulaCanController,
-        title: "Debugging at Scale — Footprint & Schematic Validation",
+        title: "Debugging at Scale: Footprint and Schematic Validation",
         content: "I identified and resolved over 50 footprint-related errors, standardizing component libraries and ensuring manufacturing compatibility. This phase required careful cross-referencing between datasheets, symbol libraries, and PCB constraints.\n\nBy the end of this stage, the schematic was fully validated at the component level and ready for layout, with improved modularity and maintainability.",
       },
       {
         image: formulaPcbTop,
-        title: "CAN Communication — Reliability-Critical Subsystem",
+        title: "CAN Communication: Reliability-Critical Subsystem",
         content: "I designed and finalized the CAN controller schematic, ensuring proper transceiver integration and signal routing aligned with automotive communication standards.\n\nThis subsystem was critical for vehicle-level communication, and the design emphasized robustness, correct termination, and noise resilience.",
       },
       {
         image: formulaPcbBottom,
-        title: "PCB Design — Aggressive Size Optimization & Failure Analysis",
+        title: "PCB Design: Aggressive Size Optimization and Failure Analysis",
         content: "I completed a full PCB layout iteration, reducing board size by approximately 50% compared to the previous generation.\n\nHowever, post-layout review revealed critical issues:\n\n• CAN signal interference due to routing proximity and lack of isolation\n• Inefficient power distribution paths\n• Poor return path continuity caused by a fragmented ground plane\n\nRather than pushing forward with a flawed design, I rejected the layout and conducted a detailed failure analysis. This reinforced key principles in high-speed and power electronics design, particularly the importance of grounding strategy and signal integrity.",
       },
       {
         image: formulaFinalReorg,
-        title: "Final Iteration — Design Refactor & Engineering Handoff",
+        title: "Final Iteration: Design Refactor and Engineering Handoff",
         content: "In the final phase, I refactored sections of the schematic to reduce routing complexity and improve layout cleanliness for the next iteration.\n\nDue to project timeline constraints and parallel firmware development priorities, I transitioned the design to the electrical lead for continuation. I ensured the handoff included a clean schematic, corrected footprints, and clear design intent.",
       },
     ],
   },
   {
     title: "Formula SAE: Charging Board Firmware",
-    description: "Firmware development for the Formula SAE Charging Board — details coming soon.",
+    description: "Firmware development for the Formula SAE Charging Board. Details coming soon.",
     longDescription: "Details for this project are coming soon. Check back later for a full description of the Charging Board firmware development.",
     tags: ["STM32", "Embedded C", "CAN Bus", "Firmware"],
     icon: Cpu,
@@ -121,7 +121,7 @@ const TeamProjects = () => {
     <>
       <Helmet>
         <title>Team Projects | DTN</title>
-        <meta name="description" content="Team projects by Duc Nguyen — robotics, embedded systems, and hardware design." />
+        <meta name="description" content="Team projects by Duc Nguyen across robotics, embedded systems, and hardware design." />
       </Helmet>
       <div className="min-h-screen bg-background">
         <Navigation />

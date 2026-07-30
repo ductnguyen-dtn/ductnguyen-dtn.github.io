@@ -18,6 +18,7 @@ const Navigation = () => {
   }, []);
 
   const navLinks = [
+    { label: "Home", path: "/" },
     { label: "About", path: "/about" },
     { label: "Team Projects", path: "/team-projects" },
     { label: "Personal Projects", path: "/personal-projects" },
@@ -32,20 +33,15 @@ const Navigation = () => {
       }`}
     >
       <div className="container px-6">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          <Link
-            to="/"
-            className="text-xl font-bold font-mono text-gradient hover:opacity-90 transition-opacity duration-500"
-          >
-            {"<DTN />"}
-          </Link>
-
-          <div className="hidden md:flex items-center gap-6">
+        {/* No wordmark: links are absolutely centred so they stay centred in the
+            viewport regardless of how wide the right-hand controls get. */}
+        <div className="relative flex items-center justify-end h-16 md:h-20">
+          <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center gap-7">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-medium transition-colors duration-500 ${
+                className={`text-sm font-medium whitespace-nowrap transition-colors duration-500 ${
                   location.pathname === link.path
                     ? "text-primary"
                     : "text-muted-foreground hover:text-foreground"
@@ -54,29 +50,34 @@ const Navigation = () => {
                 {link.label}
               </Link>
             ))}
-            <ThemeToggle />
-            <ResumeModalButton
-              triggerText={
-                <>
-                  <FileText className="h-4 w-4" />
-                  Resume
-                </>
-              }
-              triggerProps={{ size: "sm", className: "bg-gradient-primary text-primary-foreground hover:opacity-90 gap-2" }}
-            />
           </div>
 
-          <button
-            className="md:hidden p-2 text-foreground"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          <div className="flex items-center gap-3">
+            <ThemeToggle />
+            <div className="hidden lg:block">
+              <ResumeModalButton
+                triggerText={
+                  <>
+                    <FileText className="h-4 w-4" />
+                    Resume
+                  </>
+                }
+                triggerProps={{ size: "sm", className: "bg-gradient-primary text-primary-foreground hover:opacity-90 gap-2" }}
+              />
+            </div>
+            <button
+              className="lg:hidden p-2 text-foreground"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+            >
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
       </div>
 
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg border-b border-border">
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg border-b border-border">
           <div className="container px-6 py-6 space-y-4">
             {navLinks.map((link) => (
               <Link
@@ -93,7 +94,6 @@ const Navigation = () => {
               </Link>
             ))}
             <div className="flex items-center gap-4">
-              <ThemeToggle />
               <ResumeModalButton
                 triggerText={
                   <>

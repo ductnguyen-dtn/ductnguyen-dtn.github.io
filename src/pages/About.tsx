@@ -8,7 +8,7 @@ const About = () => {
     <>
       <Helmet>
         <title>About | DTN</title>
-        <meta name="description" content="About Duc Nguyen — ECE student at Olin College focused on robotics, embedded systems, and software engineering." />
+        <meta name="description" content="About Duc Nguyen, ECE student at Olin College focused on robotics, embedded systems, and software engineering." />
       </Helmet>
       <div className="min-h-screen bg-background">
         <Navigation />

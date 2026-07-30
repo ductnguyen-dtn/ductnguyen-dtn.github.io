@@ -8,7 +8,7 @@ const Contact = () => {
     <>
       <Helmet>
         <title>Contact | DTN</title>
-        <meta name="description" content="Contact Duc Nguyen — ECE student open to opportunities." />
+        <meta name="description" content="Contact Duc Nguyen, ECE student open to opportunities." />
       </Helmet>
       <div className="min-h-screen bg-background">
         <Navigation />

@@ -8,7 +8,7 @@ const Experience = () => {
     <>
       <Helmet>
         <title>Experience | DTN</title>
-        <meta name="description" content="Experience and education — Duc Nguyen, ECE student at Olin College." />
+        <meta name="description" content="Experience and education for Duc Nguyen, ECE student at Olin College." />
       </Helmet>
       <div className="min-h-screen bg-background">
         <Navigation />

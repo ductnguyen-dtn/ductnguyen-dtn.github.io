@@ -31,7 +31,7 @@ export default function ResumeModalButton({ triggerText, triggerProps, triggerCl
           <DialogHeader>
             <DialogTitle className="text-xl">Resume</DialogTitle>
             <DialogDescription className="text-sm">
-              Embedded preview — open the PDF for the best viewing experience.
+              Embedded preview. Open the PDF for the best viewing experience.
             </DialogDescription>
           </DialogHeader>
         </div>

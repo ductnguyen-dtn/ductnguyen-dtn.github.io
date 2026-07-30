@@ -1,26 +1,26 @@
-import { Cpu, Code2, Cog, Zap } from "lucide-react";
+import { Cpu, Brain, Cog, Zap } from "lucide-react";
 
 const AboutSection = () => {
   const focuses = [
     {
       icon: Cpu,
       title: "Robotics",
-      description: "Autonomous systems, computer vision, motion planning, and ROS development",
+      description: "Legged locomotion, ROS 2 navigation with SLAM and NAV2, and autonomous mobile robots",
     },
     {
       icon: Zap,
       title: "Embedded Systems",
-      description: "Microcontroller programming, FPGA design, real-time systems, and hardware interfaces",
+      description: "STM32 and ATmega firmware, CAN bus, ArduPilot, and servo and motor control",
     },
     {
-      icon: Code2,
-      title: "Software Engineering",
-      description: "Full-stack development, algorithms, data structures, and system architecture",
+      icon: Brain,
+      title: "Simulation and RL",
+      description: "Reinforcement learning policies in NVIDIA Isaac Lab, reward shaping, and sim-to-real transfer",
     },
     {
       icon: Cog,
       title: "Hardware Design",
-      description: "PCB design, circuit analysis, signal processing, and prototyping",
+      description: "KiCad schematic capture and PCB layout, power distribution, and mixed-signal bring-up",
     },
   ];
 
@@ -34,11 +34,12 @@ const AboutSection = () => {
           <div className="text-center mb-16">
             <span className="text-sm font-mono text-primary uppercase tracking-wider">About Me</span>
             <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 text-foreground">
-              Building the <span className="text-gradient">Future</span>
+              What I <span className="text-gradient">Work On</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              I'm a rising sophomore studying Electrical and Computer Engineering at Olin College of Engineering,
-              passionate about autonomous systems, embedded development, and hardware design.
+              I'm a rising sophomore studying Electrical and Computer Engineering at Olin College. Most of my work
+              sits where control software meets the hardware it runs on, from training locomotion policies in
+              simulation to laying out the boards that drive the motors.
             </p>
           </div>
 
@@ -70,9 +71,9 @@ const AboutSection = () => {
           {/* Stats */}
           <div className="mt-16 grid grid-cols-4 gap-8">
             {[
-              { value: "6+", label: "Projects" },
-              { value: "1", label: "Internship" },
-              { value: "3", label: "Team Projects" },
+              { value: "10", label: "Projects" },
+              { value: "3", label: "Internships" },
+              { value: "6", label: "Team Projects" },
               { value: "2", label: "Awards" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">

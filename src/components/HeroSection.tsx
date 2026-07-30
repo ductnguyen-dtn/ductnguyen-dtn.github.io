@@ -2,19 +2,13 @@ import { Github, Linkedin, Mail, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ResumeModalButton from "@/components/ResumeModalButton";
+import HeroObject from "@/components/HeroObject";
 
 const HeroSection = () => {
 
     return (
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background effects */}
-        <div className="absolute inset-0 grid-pattern opacity-50" />
-        <div className="absolute inset-0 noise" />
-        <div className="absolute top-1/4 -left-32 w-96 h-96 rounded-full blur-3xl animate-pulse-glow bg-[hsl(var(--brand-1))]/20" />
-        <div
-          className="absolute bottom-1/4 -right-32 w-96 h-96 rounded-full blur-3xl animate-pulse-glow bg-[hsl(var(--brand-2))]/20"
-          style={{ animationDelay: "1.5s" }}
-        />
+        <HeroObject />
 
         <div className="container relative z-10 px-6 py-20">
           <div className="max-w-4xl mx-auto text-center">
@@ -41,15 +35,15 @@ const HeroSection = () => {
               className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-8 animate-slide-up font-light"
               style={{ animationDelay: "0.4s" }}
             >
-              Electrical & Computer Engineering student passionate about{" "}
-              <span className="text-primary font-medium">robotics</span>,{" "}
-              <span className="text-accent font-medium">embedded systems</span>, and{" "}
-              <span className="text-primary font-medium">software engineering</span>
+              Electrical and Computer Engineering at Olin. I work on{" "}
+              <span className="text-primary font-medium">legged robot locomotion</span>,{" "}
+              <span className="text-accent font-medium">embedded firmware</span>, and the{" "}
+              <span className="text-primary font-medium">boards underneath both</span>.
             </p>
 
             {/* Tech stack pills */}
             <div className="flex flex-wrap justify-center gap-3 mb-12 animate-slide-up" style={{ animationDelay: "0.5s" }}>
-              {["Python", "C++", "Embedded C", "ROS2", "STM32", "KiCad", "ArduPilot"].map((tech) => (
+              {["Python", "C++", "Embedded C", "ROS2", "Isaac Lab", "STM32", "KiCad"].map((tech) => (
                 <span
                   key={tech}
                   className="px-4 py-2 text-sm font-mono bg-secondary/50 text-secondary-foreground rounded-lg border border-border hover:border-primary/40 hover:bg-primary/5 transition-all duration-500 ease-out hover:shadow-[0_0_18px_hsl(var(--glow)_/_0.18)]"
