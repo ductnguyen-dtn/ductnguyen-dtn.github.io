@@ -11,7 +11,8 @@ const ExperienceSection = () => {
         "Trained quadruped locomotion policies in NVIDIA Isaac Lab, taking the robot from postural collapse to stable forward walking across 18 documented checkpoints",
         "Root-caused a simulation defect in which a fixed root joint pinned the robot base, making nonzero policy actions produce zero movement",
         "Ran controlled reward-shaping experiments across action scale, foot clearance, and heading-drift terms, promoting a checkpoint only after side-by-side diagnostic comparison",
-        "Worked across both the electrical hardware and the RL training stack, targeting sim-to-real transfer onto physical quadruped platforms",
+        "Wired and integrated the full electronics stack for the SpotMicro quadruped — 12 servos, PWM driver, IMU, and stepped-down power distribution",
+        "Bench-tested drive motors over CAN bus, validating command and feedback behaviour ahead of integration",
       ],
     },
     {
