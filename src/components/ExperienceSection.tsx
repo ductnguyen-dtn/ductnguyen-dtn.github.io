@@ -1,4 +1,4 @@
-import { Briefcase, GraduationCap, Calendar, Linkedin, ExternalLink } from "lucide-react";
+import { Briefcase, GraduationCap, Calendar, Linkedin, ExternalLink, Github } from "lucide-react";
 
 const ExperienceSection = () => {
   const experiences = [
@@ -13,6 +13,10 @@ const ExperienceSection = () => {
         "Ran controlled reward-shaping experiments across action scale, foot clearance, and heading-drift terms, promoting a checkpoint only after side-by-side diagnostic comparison",
         "Wired and integrated the full electronics stack for the SpotMicro quadruped: 12 servos, PWM driver, IMU, and stepped-down power distribution",
         "Bench-tested drive motors over CAN bus, validating command and feedback behaviour ahead of integration",
+      ],
+      repos: [
+        { label: "SpotMicro", url: "https://github.com/ductnguyen-dtn/spotmicro-locomotion" },
+        { label: "Unitree G1", url: "https://github.com/ductnguyen-dtn/g1-humanoid-locomotion" },
       ],
     },
     {
@@ -154,6 +158,22 @@ const ExperienceSection = () => {
                           </a>
                         )}
                       </div>
+                      {exp.repos && (
+                        <div className="flex flex-wrap items-center gap-2 mb-4 -mt-2">
+                          {exp.repos.map((repo) => (
+                            <a
+                              key={repo.url}
+                              href={repo.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-mono bg-secondary/60 text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all"
+                            >
+                              <Github className="w-3.5 h-3.5" />
+                              {repo.label}
+                            </a>
+                          ))}
+                        </div>
+                      )}
                       <ul className="space-y-2">
                         {exp.description.map((item, i) => (
                           <li key={i} className="text-muted-foreground text-sm flex items-start gap-2">
